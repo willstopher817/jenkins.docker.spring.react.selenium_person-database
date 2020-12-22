@@ -54,7 +54,7 @@ public class LandingPage extends WebPage {
         List<String> list = new ArrayList<>();
         getBrowserHandler()
                 .getElements(byUnorderedListCustomerList)
-                .forEach(element -> list.add(element.toString()));
+                .forEach(element -> list.add(element.getText().toString()));
         return list;
     }
 
