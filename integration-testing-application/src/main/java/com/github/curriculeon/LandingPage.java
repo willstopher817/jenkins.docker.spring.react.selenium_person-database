@@ -2,6 +2,7 @@ package com.github.curriculeon;
 
 import com.git_leon.leonium.browsertools.WebPage;
 import com.git_leon.leonium.browsertools.With;
+import com.git_leon.leonium.browsertools.browserhandler.BrowserHandlerInterface;
 import com.github.curriculeon.utils.ApplicationProperties;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
@@ -22,6 +23,11 @@ public class LandingPage extends WebPage {
 
     public LandingPage(WebDriver driver) {
         super(driver);
+    }
+
+
+    public LandingPage(BrowserHandlerInterface browserHandler) {
+        super(browserHandler);
     }
 
     @Override
