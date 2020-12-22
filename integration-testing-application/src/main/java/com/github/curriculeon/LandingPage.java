@@ -27,7 +27,7 @@ public class LandingPage extends WebPage {
     @Override
     public void navigateTo() {
         Integer webApplicationPortNumber = applicationProperties.getConfig().getInt("server-port");
-        getBrowserHandler().navigateTo("localhost:".concat(webApplicationPortNumber.toString()));
+        getBrowserHandler().navigateTo("http://localhost:".concat(webApplicationPortNumber.toString()));
     }
 
     public void sendInputToFirstName(String input) {
