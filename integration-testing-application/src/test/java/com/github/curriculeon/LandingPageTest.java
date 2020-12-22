@@ -7,7 +7,6 @@ import com.git_leon.leonium.browsertools.factories.BrowserHandlerFactory;
 import org.junit.Assert;
 import org.junit.Before;
 import org.junit.Test;
-import org.openqa.selenium.Alert;
 import org.openqa.selenium.UnexpectedAlertBehaviour;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.remote.CapabilityType;
