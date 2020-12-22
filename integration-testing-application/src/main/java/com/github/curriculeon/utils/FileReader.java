@@ -12,7 +12,6 @@ import java.util.List;
  * used to convert files contents to String
  */
 public class FileReader {
-
     private final String filename;
 
     public FileReader(String filename) {
