@@ -28,6 +28,7 @@ public class LandingPageTest {
                 .getFileFromDirectory("Report-" + System.nanoTime() + ".html")
                 .getAbsolutePath(),
                 "test-" + Long.toHexString(System.nanoTime()));
+        browserHandler.getOptions().SCREENSHOT_ON_EVENT.setValue(false);
 
         String expectedListOutput = firstName.concat(" ").concat(lastName);
         LandingPage landingPage = new LandingPage(browserHandler);
