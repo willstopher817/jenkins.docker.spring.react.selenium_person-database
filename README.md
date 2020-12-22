@@ -14,6 +14,7 @@
 
 
 ### Part 1 - Creating Maven Pipeline with this Project
+* Please review the [Java Developer Notes](./README-javadev.md) for additional details on the Maven application
 * Create a Jenkins pipeline which
 	1. [Pulls a docker _image_ with `Git`, `Java` and `Maven` installed](https://hub.docker.com/r/jamesdbloom/docker-java8-maven)
 	2. Creates a docker _container_ from the aforementioned docker _image_.
@@ -25,16 +26,15 @@
 	6. ensure output of build is displayed by Jenkins
 	* **Note** - Steps `d` and `e` can be done in one step by leveraging the command below
 		* `mvn spring-boot:run`
-* Please review the [Java Developer Notes](./README-javadev.md) for any more details on the Maven application
 		
 ### Part 2 - Create React Pipeline with this Project
+* Please review the [React Developer Notes](./README-reactdev.md) for additional details on the React application
 * Create a Jenkins pipeline which
 	1. Pulls a docker _image_ with `Git`, and `Node` installed
 	2. Creates a docker _container_ from the aforementioned docker _image_.
 	3. `git clone`s [a react Application](https://github.com/curriculeon/jenkins.docker.spring.react_projecttemplate/tree/master/client) into the container.
 	4. builds the react application inside the container
 	6. ensures output of build is displayed by Jenkins
-* Please review the [React Developer Notes](./README-reactdev.md) for any more details on the React application
 
 
 
