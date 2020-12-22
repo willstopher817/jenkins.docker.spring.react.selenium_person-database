@@ -7,7 +7,11 @@ import com.git_leon.leonium.browsertools.factories.BrowserHandlerFactory;
 import org.junit.Assert;
 import org.junit.Before;
 import org.junit.Test;
+import org.openqa.selenium.Alert;
+import org.openqa.selenium.UnexpectedAlertBehaviour;
 import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.remote.CapabilityType;
+import org.openqa.selenium.remote.DesiredCapabilities;
 
 /**
  * Created by leon on 12/22/2020.
@@ -18,7 +22,9 @@ public class LandingPageTest {
 
     @Before
     public void setup() {
-        this.driver = BrowserHandlerFactory.CHROME.getDriver();
+        DesiredCapabilities capabilities = new DesiredCapabilities();
+        capabilities.setCapability(CapabilityType.UNEXPECTED_ALERT_BEHAVIOUR, UnexpectedAlertBehaviour.IGNORE);
+        this.driver = BrowserHandlerFactory.CHROME.getDriver(capabilities);
     }
 
     private void test(String firstName, String lastName) {
@@ -39,6 +45,7 @@ public class LandingPageTest {
         landingPage.sendInputToLastName(lastName);
         landingPage.clickSubmitButton();
         landingPage.dismissAlert();
+        System.out.println(landingPage.getCustomerNameList());
 
         // then
         Assert.assertTrue(landingPage.validateNameHasBeenInput(expectedListOutput));

@@ -4,6 +4,8 @@ import com.git_leon.leonium.browsertools.WebPage;
 import com.git_leon.leonium.browsertools.With;
 import com.git_leon.leonium.browsertools.browserhandler.BrowserHandlerInterface;
 import com.github.curriculeon.utils.ApplicationProperties;
+import com.github.git_leon.Keys;
+import org.openqa.selenium.Alert;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 
@@ -45,7 +47,7 @@ public class LandingPage extends WebPage {
     }
 
     public void clickSubmitButton() {
-        getBrowserHandler().click(byButtonSubmit);
+        getBrowserHandler().getWebEntity(byButtonSubmit).click();
     }
 
     public List<String> getCustomerNameList() {
@@ -62,11 +64,22 @@ public class LandingPage extends WebPage {
                 .anyMatch(name -> name.equalsIgnoreCase(nameToSeek));
     }
 
-    public void dismissAlert() {
-        getBrowserHandler()
+    public Alert getAlert() {
+        return getBrowserHandler()
                 .getDriver()
                 .switchTo()
-                .alert()
-                .dismiss();
+                .alert();
+    }
+
+    public void dismissAlert() {
+        try {
+            getAlert().dismiss();
+        } catch (Exception ignored1) {
+            try {
+                getAlert().accept();
+            } catch (Exception ignored2) {
+                getAlert().sendKeys(Keys.ESCAPE.toString());
+            }
+        }
     }
 }
