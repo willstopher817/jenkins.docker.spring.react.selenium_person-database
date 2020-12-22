@@ -17,7 +17,7 @@ public class LandingPage extends WebPage {
     private ApplicationProperties applicationProperties = new ApplicationProperties();
     private By byInputFirstName = With.tagAttributeValue("input", "name", "fname");
     private By byInputLastName = With.tagAttributeValue("input", "name", "lname");
-    private By byButtonSubmit = With.tagAndText("input", "Submit");
+    private By byButtonSubmit = With.tagAttributeValue("button", "type", "submit");
     private By byUnorderedListCustomerList = By.cssSelector("#customer-list > ul:nth-child(2) > li");
 
 
@@ -60,5 +60,13 @@ public class LandingPage extends WebPage {
         return getCustomerNameList()
                 .stream()
                 .anyMatch(name -> name.equalsIgnoreCase(nameToSeek));
+    }
+
+    public void dismissAlert() {
+        getBrowserHandler()
+                .getDriver()
+                .switchTo()
+                .alert()
+                .dismiss();
     }
 }

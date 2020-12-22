@@ -38,6 +38,7 @@ public class LandingPageTest {
         landingPage.sendInputToFirstName(firstName);
         landingPage.sendInputToLastName(lastName);
         landingPage.clickSubmitButton();
+        landingPage.dismissAlert();
 
         // then
         Assert.assertTrue(landingPage.validateNameHasBeenInput(expectedListOutput));
