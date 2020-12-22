@@ -36,7 +36,7 @@ public class LandingPageTest {
         // when
         landingPage.navigateTo();
         landingPage.sendInputToFirstName(firstName);
-        landingPage.sendInputToFirstName(lastName);
+        landingPage.sendInputToLastName(lastName);
         landingPage.clickSubmitButton();
 
         // then
