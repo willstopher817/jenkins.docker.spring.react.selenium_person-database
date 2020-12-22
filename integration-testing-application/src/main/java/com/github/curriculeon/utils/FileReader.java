@@ -3,6 +3,8 @@ package com.github.curriculeon.utils;
 import java.io.IOException;
 import java.nio.file.Files;
 import java.nio.file.Paths;
+import java.util.Arrays;
+import java.util.List;
 
 /**
  * @author leonhunter
@@ -15,6 +17,14 @@ public class FileReader {
 
     public FileReader(String filename) {
         this.filename = filename;
+    }
+
+    public String getLine(int number) {
+        return getLines().get(number);
+    }
+
+    public List<String> getLines() {
+        return Arrays.asList(toString().split("\n"));
     }
 
     @Override
