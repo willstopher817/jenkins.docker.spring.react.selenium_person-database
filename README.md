@@ -61,10 +61,7 @@
 	3. Dockerizes and Runs Selenium Application
 		1. Pulls a docker _image_ with `Git`, `Java`, and `Maven` installed.
 		2. Creates a docker _container_ from the aforementioned docker _image_.
-		3. `git clone`s [a selenium application](https://github.com/curriculeon/jenkins.docker.spring.react_projecttemplate/tree/master/client) into the container.
-		4. `.jar`s the cloned maven application within the container by leveraging command below
-			* `mvn package`
-		5. runs Maven application using the `.jar` in container by leveraging command below
-			* `java -jar target/${name-of-jar}.jar`
-		4. builds the react application inside the container
+		3. `git clone`s [a selenium application](https://github.com/curriculeon/jenkins.docker.spring.react_person-database/tree/master/integration-testing-application) into the container.
+		4. runs `JUnit` tests of the selenium application and ignores failures on `.jar` in container by leveraging command below
+			* `mvn package -Dmaven.test.failure.ignore=true`
 		6. ensures output of build is displayed by Jenkins
