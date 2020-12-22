@@ -34,7 +34,7 @@
 	3. `git clone`s [a react Application](https://github.com/curriculeon/jenkins.docker.spring.react_projecttemplate/tree/master/client) into the container.
 	4. builds the react application inside the container
 	6. ensures output of build is displayed by Jenkins
-* Please review the [Java Developer Notes](./README-reactdev.md) for any more details on the React application
+* Please review the [React Developer Notes](./README-reactdev.md) for any more details on the React application
 
 
 
