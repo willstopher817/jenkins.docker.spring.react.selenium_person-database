@@ -38,7 +38,7 @@
 
 
 
-### Part 3 - Create React Pipeline with this Project
+### Part 3 - Create Maven & React Pipeline with this Project
 * Create a Jenkins pipeline which
 	1. Dockerizes and Builds Maven Application
 		1. [Pulls a docker _image_ with `Git`, `Java` and `Maven` installed](https://hub.docker.com/r/jamesdbloom/docker-java8-maven)
