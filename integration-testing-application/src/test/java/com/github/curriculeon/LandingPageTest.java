@@ -5,6 +5,7 @@ import com.git_leon.leonium.browsertools.browserhandler.BrowserHandler;
 import com.git_leon.leonium.browsertools.browserhandler.BrowserHandlerInterface;
 import com.git_leon.leonium.browsertools.browserhandler.reporting.BrowserHandlerLayeredLogger;
 import com.git_leon.leonium.browsertools.factories.BrowserHandlerFactory;
+import com.github.curriculeon.utils.ApplicationProperties;
 import org.junit.After;
 import org.junit.Assert;
 import org.junit.Before;
@@ -18,6 +19,7 @@ import org.openqa.selenium.remote.DesiredCapabilities;
  * Created by leon on 12/22/2020.
  */
 public class LandingPageTest {
+    private ApplicationProperties applicationProperties;
     private WebDriver driver;
     private static final String reportName = "Site Traversal Reports";
     private BrowserHandlerInterface browserHandler;
@@ -26,6 +28,7 @@ public class LandingPageTest {
     public void setup() {
         DesiredCapabilities capabilities = new DesiredCapabilities();
         capabilities.setCapability(CapabilityType.UNEXPECTED_ALERT_BEHAVIOUR, UnexpectedAlertBehaviour.IGNORE);
+        this.applicationProperties = new ApplicationProperties();
         this.driver = BrowserHandlerFactory.CHROME.getDriver(capabilities);
         this.browserHandler = new BrowserHandlerLayeredLogger(driver, DirectoryReference
                 .TARGET_DIRECTORY
@@ -60,6 +63,7 @@ public class LandingPageTest {
 
     @Test
     public void test() {
-        test("Leon Hunter", String.valueOf(System.nanoTime()));
+        String applicationOwner = "Leon Hunter";
+        test(applicationOwner, String.valueOf(System.nanoTime()));
     }
 }
