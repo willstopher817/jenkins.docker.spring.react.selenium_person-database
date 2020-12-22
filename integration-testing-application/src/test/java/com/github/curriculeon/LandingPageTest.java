@@ -59,7 +59,7 @@ public class LandingPageTest {
     }
 
     @Test
-    public void test1() {
-        test("Leon", "Hunter");
+    public void test() {
+        test("Leon Hunter", String.valueOf(System.nanoTime()));
     }
 }
