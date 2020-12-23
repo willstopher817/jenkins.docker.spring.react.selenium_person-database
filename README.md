@@ -25,7 +25,7 @@
 	5. runs `Spring` application using the `.jar` in container by leveraging command below
 		* `java -jar target/${name-of-jar}.jar`
 	6. ensure output of build is displayed by Jenkins
-	* **Note** - Steps `v` and `vi` can be done in one step by leveraging the command below
+	* **Note** - Steps `iv` and `v` can be done in one step by leveraging the command below
 		* `mvn spring-boot:run`
 		
 ### Part 2 - Create React Pipeline with this Project
