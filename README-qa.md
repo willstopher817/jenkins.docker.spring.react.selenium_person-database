@@ -6,18 +6,6 @@
 * To modify the port that to access the Web Application, modify the `application.properties` file located in the `src/main/resources` directory.
 * To switch to a [Headless Browser](https://en.wikipedia.org/wiki/Headless_browser), modify the [BrowserDeclaration in the test classes](https://github.com/curriculeon/jenkins.docker.spring.react_person-database/blob/f847a700604b05f48833deb7c606c4562da55e0e/integration-testing-application/src/test/java/com/github/curriculeon/LandingPageTest.java#L32) to use `PhantomJS`.
 
-## Manual Integration Testing
-* To test the web application and web service integration manually, begin by
-	1. starting the web service by executing the command below from the root directory of the web service
-		* `mvn spring-boot:run &`
-	2. starting the web application by executing the command below from the root directory of the web application
-		* `npm install`
-		* `npm start &`
-	3. Navigate to `localhost:3000` to view the Web Application.
-	4. Monitor the terminal output from the Web Service to ensure the two projects are integrated properly.
-
-[![](./manual-integration-testing.gif)](./manual-integration-testing.gif)
-
 
 ## Automated Integration Testing
 * This is an animation of the integration tests running,
@@ -36,3 +24,15 @@
 
 
 
+
+## Manual Integration Testing
+* To test the web application and web service integration manually, begin by
+	1. starting the web service by executing the command below from the root directory of the web service
+		* `mvn spring-boot:run &`
+	2. starting the web application by executing the command below from the root directory of the web application
+		* `npm install`
+		* `npm start &`
+	3. Navigate to `localhost:3000` to view the Web Application.
+	4. Monitor the terminal output from the Web Service to ensure the two projects are integrated properly.
+
+[![](./manual-integration-testing.gif)](./manual-integration-testing.gif)
