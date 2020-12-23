@@ -78,7 +78,7 @@
 
 ### Part 4 - Create a Jenkins (Docker+Maven:SpringBoot, Docker+NodeJS:ReactJS, Docker+Maven:Selenium) pipeline
 * Please review the  [Test Automation Engineer Notes](./integration-testing/README.md) for additional details on the integration testing application
-#### Dockerizes and Builds React Application
+#### Dockerizes and Builds Maven Application
 1. [Pulls a docker _image_ with `Git`, `Java` and `Maven` installed](https://hub.docker.com/r/jamesdbloom/docker-java8-maven)
 2. Creates a docker _container_ from the aforementioned docker _image_.
 3. `git clone`s [a maven Application](https://github.com/curriculeon/jenkins.docker.spring.react_projecttemplate/tree/master/pom.xml) into the container.
