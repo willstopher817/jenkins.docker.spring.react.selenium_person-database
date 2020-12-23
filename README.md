@@ -22,10 +22,6 @@
 	1. [Pulls a docker _image_ with `Git`, `Java` and `Maven` installed](https://hub.docker.com/r/jamesdbloom/docker-java8-maven)
 	2. Creates a docker _container_ from the aforementioned docker _image_.
 	3. `git clone`s [a maven Application](https://github.com/curriculeon/jenkins.docker.spring.react_projecttemplate/tree/master/pom.xml) into the container.
-	4. `.jar`s the cloned maven application within the container by leveraging command below
-		* `mvn package`
-	5. runs `Spring` application using the `.jar` in container by leveraging command below
-		* `java -jar target/${name-of-jar}.jar`
 	6. ensure output of build is displayed by Jenkins
 	* **Note** - Steps `iv` and `v` can be done in one step by leveraging the command below
 		* `mvn spring-boot:run`
@@ -47,10 +43,6 @@
 		1. [Pulls a docker _image_ with `Git`, `Java` and `Maven` installed](https://hub.docker.com/r/jamesdbloom/docker-java8-maven)
 		2. Creates a docker _container_ from the aforementioned docker _image_.
 		3. `git clone`s [a maven Application](https://github.com/curriculeon/jenkins.docker.spring.react_projecttemplate/tree/master/pom.xml) into the container.
-		4. `.jar`s the cloned maven application within the container by leveraging command below
-			* `mvn package`
-		5. runs `Spring` application using the `.jar` in container by leveraging command below
-			* `java -jar target/${name-of-jar}.jar`
 		6. ensure output of build is displayed by Jenkins
 	* **Note**
 		* Steps `d` and `e` can be done in one step by leveraging the command below
@@ -71,10 +63,6 @@
 		1. [Pulls a docker _image_ with `Git`, `Java` and `Maven` installed](https://hub.docker.com/r/jamesdbloom/docker-java8-maven)
 		2. Creates a docker _container_ from the aforementioned docker _image_.
 		3. `git clone`s [a maven Application](https://github.com/curriculeon/jenkins.docker.spring.react_projecttemplate/tree/master/pom.xml) into the container.
-		4. `.jar`s the cloned maven application within the container by leveraging command below
-			* `mvn package`
-		5. runs `Spring` application using the `.jar` in container by leveraging command below
-			* `java -jar target/${name-of-jar}.jar`
 		6. ensure output of build is displayed by Jenkins
 	* **Note**
 		* Steps `d` and `e` can be done in one step by leveraging the command below
