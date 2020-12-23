@@ -1,4 +1,4 @@
-# Jenkins Docker Spring React Cluster Project
+# Jenkins Docker Spring React Selenium Cluster Project
 
 * **Objective** - To create a product a Jenkins Pipeline which
 	* dockerizes a `Spring` application of `Maven` archetype
