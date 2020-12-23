@@ -1,10 +1,10 @@
 # Test Automation Developer Notes
 
-* The `JUnit` tests in the following application are built using [Leonium](https://www.github.com/git-leon/leonium), a [Selenium]() wrapper framework.
+* The `JUnit` tests in the following application are built using [Leonium](https://www.github.com/git-leon/leonium), a [Selenium](https://www.selenium.dev/) wrapper framework.
 * To run the tests in this application execute the command below
 	* `mvn package -Dmaven.test.failure.ignore=true`
 * To modify the port that to access the Web Application, modify the `application.properties` file located in the `src/main/resources` directory.
-* To switch to a [Headless Browser](), modify the [BrowserDeclaration in the test classes]() to use `PhantomJS`.
+* To switch to a [Headless Browser](https://en.wikipedia.org/wiki/Headless_browser), modify the [BrowserDeclaration in the test classes](https://github.com/curriculeon/jenkins.docker.spring.react_person-database/blob/f847a700604b05f48833deb7c606c4562da55e0e/integration-testing-application/src/test/java/com/github/curriculeon/LandingPageTest.java#L32) to use `PhantomJS`.
 
 ## Running Tests
 * This is an animation of the integration tests running,
