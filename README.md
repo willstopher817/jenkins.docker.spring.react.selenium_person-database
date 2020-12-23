@@ -63,6 +63,7 @@
 
 
 ### Part 4 - Create Full Stack Application with Integration Testing Pipeline with this Project
+* Please review the  [Test Automation Engineer Notes](./README-qa.md) for additional details on the React application
 * Create a Jenkins pipeline which
 	1. Dockerizes and Builds Maven Application
 		1. [Pulls a docker _image_ with `Git`, `Java` and `Maven` installed](https://hub.docker.com/r/jamesdbloom/docker-java8-maven)
