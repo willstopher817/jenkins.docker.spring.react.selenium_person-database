@@ -6,5 +6,10 @@
 * To modify the port that to access the Web Application, modify the `application.properties` file located in the `src/main/resources` directory.
 * To switch to a [Headless Browser](), modify the [BrowserDeclaration in the test classes]() to use `PhantomJS`.
 
-## Running Tests
+## Running Automated Tests
 [![](./run-selenium-tests.gif)](./run-selenium-tests.gif)
+
+
+## Manual Integration Testing
+
+[![](./manual-integration-testing.gif)](./manual-integration-testing.gif)
