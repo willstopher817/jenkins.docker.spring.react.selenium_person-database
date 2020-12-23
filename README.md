@@ -3,6 +3,8 @@
 * **Objective** - To create a product a Jenkins Pipeline which
 	* dockerizes a `Spring` application of `Maven` archetype
 	* dockerizes a `React` application
+	* dockerizes a `Selenium` application of `Maven` archetype
+	* runs integration tests on the Full Stack `Spring` & `React` application using the `Selenium` application
 * **Purpose** - To gain familiarity with running multiple docker containers in a single Jenkins pipeline.
 
 
